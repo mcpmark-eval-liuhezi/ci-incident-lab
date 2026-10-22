@@ -1,0 +1,10 @@
+name: ci-drill
+on: [push, pull_request, workflow_dispatch]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: simulated-check
+        run: |
+          echo "SIMULATED-CHECK-FAILURE"
+          exit 1
